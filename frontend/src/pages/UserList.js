@@ -40,50 +40,36 @@ const UserList = () => {
   //   return <Link to="/login" />;
   // }
 
-  const goToCreateProj = () => {
-    location('/createProj');
+  const goToCreateUser = () => {
+    location('/createUser');
   }
   const backToDashboard = () => {
     location('/dashboard');
   }
-
-  const assignTask = (proj_id) => {
-    location('/createTask')
+ 
+  const createuser = (proj_id) => {
+    location('/createuser')
   }
 
-  let ProjList = [
-    {
-      id: '001',
-      title: 'a',
-      description: 'des 1',
-      creation_date: '21-01-2025',
-      project_owner: 'Jhon 1'
-    },
-    {
-      id: '002',
-      title: 'ai',
-      description: 'des 2',
-      creation_date: '21-01-2025',
-      project_owner: 'Jhon 2'
-    }
-  ]
-
   return (
-    <div className="dashboard">
+<div className="dashboard">
       {/* <h1>Welcome to Your Dashboard, {user.name}!</h1> */}
       <div className="dashboard-content">
-            <div className="projects">
+<div className="projects">
            
-          <button onClick={goToCreateProj}> Create Project  {JSON.stringify(user[0])} </button>
+          <button onClick={goToCreateUser}> Create User </button>
+          <button  > Add User </button>
           
           {
             user?.map(each => 
               <div>
                 <p> ID: {each.id} </p>
-                {/* <p> Title: {each.title} </p>
-                <p> Project Owner: {each.project_owner} </p>
-                <p> Created Date: {each.creation_date} </p> */}
-                <button onClick={() => assignTask(each.id)}> Assign Task</button>
+                <p> name: {each.name} </p>
+                <p> username: {each.username} </p>
+                <p> email: {each.email} </p>
+                
+                <button onClick={() => createuser(each.id)}> Edit User</button>
+                <button onClick={() => createuser(each.id)}> Delete User</button>
                 <p><hr/></p>
               </div>
             )

@@ -55,48 +55,38 @@ const CreateUser = () => {
 
   return (
     <div>
-      <h2>Project Details</h2>
+      <h2>User Details</h2>
       <form onSubmit={handleSubmit}>
+        
         <div>
-          <label htmlFor="title">Title</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
-            name="title"
-            id="title"
-            value={formData.title}
+            name="name"
+            id="name"
+            value={formData.name}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="description">Description</label>
+          <label htmlFor="username">user name</label>
           <input
             type="text"
-            name="description"
-            id="description"
-            value={formData.description}
+            name="username"
+            id="username"
+            value={formData.username}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="creation_date">Creation Date</label>
+          <label htmlFor="email">email</label>
           <input
-            type="date"
-            name="creation_date"
-            id="creation_date"
-            value={formData.creation_date}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="project_owner">Project Owner</label>
-          <input
-            type="project_owner"
-            name="project_owner"
-            id="project_owner"
-            value={formData.project_owner}
+            type="text"
+            name="email"
+            id="email"
+            value={formData.email}
             onChange={handleChange}
             required
           />
@@ -104,7 +94,7 @@ const CreateUser = () => {
         {error && <p style={styles.error}>{error}</p>}
         {success && <p style={styles.success}>{success}</p>}
         <button type="submit" style={styles.button}>
-          Create Project
+          Create User
         </button>
       </form>
     </div>
@@ -116,7 +106,7 @@ const styles = {
       width: "100%",
       maxWidth: "400px",
       margin: "0 auto",
-      padding: "20px",
+      padding: "2px",
       textAlign: "center",
     },
     form: {
