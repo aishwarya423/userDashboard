@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-import CustomizedSnackbars from "../components/CustomizedSnackbars";
 
 const EditUser = () => {
   const [formData, setFormData] = useState({
